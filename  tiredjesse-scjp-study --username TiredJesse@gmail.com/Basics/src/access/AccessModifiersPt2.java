@@ -2,6 +2,10 @@ package access;
 
 import modifiers.AccessModifiers;
 
+/**
+ * @see modifiers.AccessModifiers first before this
+ */
+
 public class AccessModifiersPt2 {
 
 	public static void main(String[] args) {
