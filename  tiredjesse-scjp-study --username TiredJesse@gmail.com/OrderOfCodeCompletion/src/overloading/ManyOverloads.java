@@ -3,7 +3,7 @@ package overloading;
 import java.util.Arrays;
 import java.util.List;
 
-// See what happens which methods runs when you comment out other methods
+// See which methods run when you comment out other methods
 
 public class ManyOverloads {
 
