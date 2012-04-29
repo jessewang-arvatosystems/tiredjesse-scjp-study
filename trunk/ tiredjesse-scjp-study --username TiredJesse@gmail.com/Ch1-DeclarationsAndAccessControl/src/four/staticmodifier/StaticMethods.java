@@ -5,13 +5,13 @@ public class StaticMethods {
 
 	public static void main(String insideStaticMethod []) {
 		
-//		nonStaticMethodStop(); // Illegal move. Must instantiate object before using non-static method/variables anything
+//		nonStaticMethodStop(); // Illegal move. Must instantiate object before using non-static method/variables
 		new StaticMethods().nonStaticMethodStop(); // Legal!
 		
 		// Legal but pointless, compiler translates to StaticMethods.staticMethodGo();
 		new StaticMethods().staticMethodGo();
 		
-		StaticMethods.staticMethodGo(); // Legal! But since we're inside StaticMethods so...
+		StaticMethods.staticMethodGo(); // Valid! Since we're inside the class where the method was declared...
 		staticMethodGo(); // This works as well!
 	}
 	
