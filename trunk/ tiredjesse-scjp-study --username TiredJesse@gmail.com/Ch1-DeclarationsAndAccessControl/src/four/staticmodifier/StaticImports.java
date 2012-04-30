@@ -25,7 +25,7 @@ public class StaticImports {
 		getInteger("321");
 		
 		// Avoid "import static" with too many packages, otherwise compiler encounters ambiguity issues
-//		toString(new int[] {1, 2, 3}); //Supposed to be Arrays.toString()
+//		toString(new int[] {1, 2, 3}); // Supposed to be Arrays.toString()
 //		toString(3.1); // Supposed to be Double.toString();
 		
 		// This still works!
