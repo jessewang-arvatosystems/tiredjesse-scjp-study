@@ -1,12 +1,14 @@
-package three.casting;
+package four.casting;
 
 public class CastingPrimitives {
 	static byte byteNum = 5;
 	static short shortNum = 3;
 	static int intNum = 4;
-	static long longNum = 10L;
-	static float floatNum = 32f;
-	static double doubleNum = 321.0;
+	static long longNum = 10;
+	static long quickCastLongNum = 10L; // Can use capital 'L' or lower case 'l'
+	static float floatNum = 32;
+	static float quickCastFloatNum = 12f; // Can use capital 'F' or lower case 'f'
+	static double doubleNum = 321;
 	
 	public static void main(String[] downcasts) {
 //		byteNum = shortNum; // Downcast required!
