@@ -1,4 +1,4 @@
-package three.casting;
+package four.casting;
 
 // All of the code will compile, but there will be ClassCastExceptions thrown
 // The cast () has to be the reference type or a subclass of that reference Type
