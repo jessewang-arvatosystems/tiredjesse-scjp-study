@@ -8,8 +8,8 @@ public class Autoboxing {
 		int i1 = bigI1; // Unboxes Integer wrapper into primitive int 5;
 		
 		// Before Java 5 had to unbox and box manually
-		Integer bigI2 = (Integer) 5; // or new Integer(5);
-		int i2 = (int)bigI2; 
+		Integer bigI2 = new Integer(5); // Box;
+		int i2 = bigI2.intValue(); // Unbox
 		
 		// Strange things occur when comparing primitives and Wrappers
 		int i3 = 200;
