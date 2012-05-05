@@ -21,6 +21,10 @@ public class BasicMatching {
 		
 //		matcher("[g-ma-c]", "alb aks21 ha gmj"); // [X-YA-B] matches any char found in between X and Y
 												 // and between A and B inclusive.
+		
+//		matcher(".", "a _ %1 &#"); // . any character
+		
+//		matcher("\\.", "ad.fdasd ."); // \\. regex sees this as the period character
 	}
 	
 	public static void matcher(String pattern, String stringToMatch) {

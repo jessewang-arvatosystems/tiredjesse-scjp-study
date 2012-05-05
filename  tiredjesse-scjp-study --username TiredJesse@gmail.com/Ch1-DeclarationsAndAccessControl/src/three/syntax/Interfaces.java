@@ -20,11 +20,12 @@ interface SampleInterface extends Interfaces {
 	public abstract void method4();
 	
 	//Note the modifiers of these variables and methods CANNOT be changed
-	/*
+	/*	
 	private int badNum = 0;
 	volatile int badNum2 = 0;
 	
 	final void badMethod();
 	synchronized void badMethod2();
+	static void badMethod3();
 	*/
 }
