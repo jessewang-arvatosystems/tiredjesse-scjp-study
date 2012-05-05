@@ -15,4 +15,5 @@ class H1elloWorld{}
 class 1HelloWorld{}
 class *HelloWorld{}
 class H*elloWorld{}
+class three.syntax{}
 */

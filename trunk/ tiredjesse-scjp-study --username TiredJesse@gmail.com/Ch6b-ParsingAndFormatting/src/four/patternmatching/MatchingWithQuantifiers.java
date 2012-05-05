@@ -9,10 +9,6 @@ public class MatchingWithQuantifiers {
 //		matcher("\\w*", "12ad 123as 12fa2d"); // * zero or more occurrences 
 											  // Note finds an extra space at the end!
 		
-//		matcher("\\d?", "12ad 123as 12fa2d"); // ? zero or one occurrence 
-		
-//		matcher(".", "a _ %1 &#"); // . any character
-		
-		matcher("\\.", "ad.fdasd ."); // \\. regex sees this as the period character
+		matcher("\\d?", "12ad 123as 12fa2d"); // ? zero or one occurrence 
 	}
 }
