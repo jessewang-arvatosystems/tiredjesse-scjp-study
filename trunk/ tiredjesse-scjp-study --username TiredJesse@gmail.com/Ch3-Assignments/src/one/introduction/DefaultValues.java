@@ -11,8 +11,9 @@ public class DefaultValues {
 	private float f1;
 	private double d1;
 	private String str1;
-	private int[] iArray1 = new int[5];
-	private String[] sArray1 = new String[5];
+	private boolean[] bArray1 = new boolean[3];
+	private int[] iArray1 = new int[3];
+	private String[] sArray1 = new String[3];
 	
 	public static void main(String [] args) {
 		DefaultValues def = new DefaultValues();
@@ -30,22 +31,27 @@ public class DefaultValues {
 		float f1 = 0;
 		double d1 = 0;
 		String str1 = null;
-		int[] iArray1 = new int[5];
-		String[] sArray1 = new String[5];
+		boolean[] bArray1 = new boolean[3];
+		int[] iArray1 = new int[3];
+		String[] sArray1 = new String[3];
 		
-		return "localMethod [bool1=" + bool1 + ", b1=" + b1 + ", s1=" + s1
+		return "LocalValues [bool1=" + bool1 + ", b1=" + b1 + ", s1=" + s1
 				+ ", i1=" + i1 + ", l1=" + l1 + ", f1=" + f1 + ", d1=" + d1
-				+ ", str1=" + str1 + ", iArray1=" + Arrays.toString(iArray1)
-				+ ", sArray1=" + Arrays.toString(sArray1) + "]";
+				+ ", str1=" + str1 + ", bArray1=" + Arrays.toString(bArray1)
+				+ ", iArray1=" + Arrays.toString(iArray1) + ", sArray1="
+				+ Arrays.toString(sArray1) + "]";
 	}
 
 	@Override
 	public String toString() {
 		return "DefaultValues [bool1=" + bool1 + ", b1=" + b1 + ", s1=" + s1
 				+ ", i1=" + i1 + ", l1=" + l1 + ", f1=" + f1 + ", d1=" + d1
-				+ ", str1=" + str1 + ", iArray1=" + Arrays.toString(iArray1)
-				+ ", sArray1=" + Arrays.toString(sArray1) + "]";
+				+ ", str1=" + str1 + ", bArray1=" + Arrays.toString(bArray1)
+				+ ", iArray1=" + Arrays.toString(iArray1) + ", sArray1="
+				+ Arrays.toString(sArray1) + "]";
 	}
+
+	
 
 
 }

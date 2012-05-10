@@ -3,6 +3,11 @@ package two.switchadvanced;
 @SuppressWarnings("unused")
 public class SwitchAdvanced {
 
+	final static Byte CONST_BYTE = 2;
+	final static Short CONST_SHORT = 3;
+	final static Character CONST_CHAR = 'A';
+	final static Integer CONST_INT = 2;
+	
 	public static void main(String... args) {
 		boolean bool1 = false;
 		char c1 = 'a';
@@ -22,19 +27,19 @@ public class SwitchAdvanced {
 		Number number = 123;
 		
 //		switch(bool1){} // Invalid!
-		switch(c1){}
-		switch(b1){}
-		switch(s1){}
-		switch(i1){}
-//		switch(l1){} // Invalid!
-//		switch(f1){} // Invalid!
-//		switch(d1){} // Invalid!
-//		switch(str1){} // Invalid!
-		switch(anEnum) {}
-		switch(bigC1) {}
-		switch(bigB1) {}
-		switch(bigS1) {}
-		switch(bigI1) {}
+		switch(c1){ case 'a' : break; }
+		switch(b1){ case 0 : break; }
+		switch(s1){ case 0 : break; }
+		switch(i1){ case 0 : break; }
+//		switch(l1){ case 0 : break; } // Invalid!
+//		switch(f1){ case 0 : break; } // Invalid!
+//		switch(d1){ case 0 : break; } // Invalid!
+//		switch(str1){ case "hello" : break; } // Invalid!
+		switch(anEnum) { case A : break; }
+		switch(bigC1) {} // {case CONST_CHAR : break;} // Cannot have wrapper constants!
+		switch(bigB1) {} // {case CONST_BYTE : break;}
+		switch(bigS1) {} // {case CONST_SHORT : break;}
+		switch(bigI1) {} // {case CONST_INT : break;}
 //		switch(number) {} // Invalid!
 		
 		switch(b1) {
