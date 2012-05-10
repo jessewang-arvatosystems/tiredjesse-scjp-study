@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 
 public class LocalBasics {
 	
@@ -25,9 +26,14 @@ public class LocalBasics {
 		System.out.println("Time Described in Italian: " + df[2].format(d));
 		
 		// This works too, can't seem to figure this out right now
-//		Locale locJapan = new Locale("ja", "JP");
-//		Calendar c2 = Calendar.getInstance(locJapan);
-//		System.out.println(c2.getTime());
+		Locale locJapan = new Locale("ja", "JP");
+		TimeZone zone = TimeZone.getDefault();
+		Calendar c2 = Calendar.getInstance(locJapan);
+		Calendar c3 = Calendar.getInstance(zone);
+		Calendar c4 = Calendar.getInstance(zone, locJapan);
+		System.out.println(c2.getTime());
+		System.out.println(c3.getTime());
+		System.out.println(c4.getTime());
 	}
 
 }

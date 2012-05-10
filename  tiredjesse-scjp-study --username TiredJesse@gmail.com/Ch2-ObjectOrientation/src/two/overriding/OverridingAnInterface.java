@@ -4,6 +4,7 @@ public class OverridingAnInterface implements OverrideThisInterface {
 	
 	public static void main(String... args) {
 		new OverridingAnInterface().doStuff();
+		new OverridingAnInterface().finalArgument(20);
 	}
 
 	// To note:
@@ -20,11 +21,15 @@ public class OverridingAnInterface implements OverrideThisInterface {
 	public short doSomethingElse() { // Valid!
 		return (short) 5;
 	}
+	
+	public void finalArgument(int num) { // Valid don't need to add final modifier
+		num++;
+	}
 
 }
 
 abstract interface OverrideThisInterface {
 	public abstract Number doStuff() throws IllegalArgumentException;
-	
 	public short doSomethingElse();
+	public void finalArgument(final int num);
 }
