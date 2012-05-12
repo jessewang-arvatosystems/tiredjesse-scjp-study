@@ -5,12 +5,20 @@ public class ManyOverrides extends C {
 		ManyOverrides go = new ManyOverrides();
 		go.doStuff(); // Runs the method of the nearest override!
 		go.doOriginalStuff(); // Force the method to find the original method
+		
+		
 	}
 }
 
+@SuppressWarnings("unused")
 class A {
 	void doStuff() {
 		System.out.println("A");
+	}
+	
+	// Private methods cannot be overridden
+	private void doThings() {
+		System.out.println("A1");
 	}
 }
 
@@ -21,6 +29,11 @@ class B extends A {
 	
 	void doOriginalStuff() {
 		super.doStuff(); // Call class A's doStuff()
+	}
+	
+	// This will not work if doThings() in class A was not private
+	void doThings() throws Exception {
+		System.out.println("B1");
 	}
 }
 

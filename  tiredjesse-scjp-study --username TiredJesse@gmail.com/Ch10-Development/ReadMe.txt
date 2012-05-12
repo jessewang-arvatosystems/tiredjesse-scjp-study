@@ -168,4 +168,6 @@ java -cp [jarname].jar;. [filename] // . to look for the [filename].class
 1.3: Can use assert as an identifier, will show as warnings when compiled.
 1.4: Cannot use assert as an identifier. 'assert' is now a keyword
 1.5: Introduction of Autoboxing and Generics, as well as other classes such as StringBuilder
+	 Allowed to do co-variant returns for overridden methods
+	 Introduction of var-args
 1.6: Introduction of Console class. TreeSet and TreeMap also implemented differently with navigable methods
