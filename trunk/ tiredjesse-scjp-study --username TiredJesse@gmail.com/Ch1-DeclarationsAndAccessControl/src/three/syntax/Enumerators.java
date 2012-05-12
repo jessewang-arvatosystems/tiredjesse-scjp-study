@@ -50,6 +50,13 @@ public class Enumerators {
 		}
 	}; // Semicolon is optional
 	
+	void someMethod() {
+		// Enums cannot be declared in methods
+//		enum BadEnum {
+//			
+//		}
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(OuterEnum.ONE.getMsg()); // constant one
 		System.out.println(InnerEnum.TWO.getMsg()); // overridden msg

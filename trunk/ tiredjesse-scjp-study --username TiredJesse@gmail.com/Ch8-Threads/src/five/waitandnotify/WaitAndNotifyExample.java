@@ -1,10 +1,10 @@
-package three.synchronization;
+package five.waitandnotify;
 
-public class WaitAndNotify implements Runnable {
+public class WaitAndNotifyExample implements Runnable {
 	
 	private Calculator calculator;
 	
-	public WaitAndNotify(Calculator calculator) {
+	public WaitAndNotifyExample(Calculator calculator) {
 		this.calculator = calculator;
 	}
 	
@@ -28,10 +28,10 @@ public class WaitAndNotify implements Runnable {
 					divide = new Calculator(3, 6, CalcFunctions.DIVIDE);
 		
 		
-		Thread 	adding = new Thread(new WaitAndNotify(add)),
-				subtracting = new Thread(new WaitAndNotify(subtract)),
-				multiplying = new Thread(new WaitAndNotify(multiply)),
-				dividing = new Thread(new WaitAndNotify(divide));
+		Thread 	adding = new Thread(new WaitAndNotifyExample(add)),
+				subtracting = new Thread(new WaitAndNotifyExample(subtract)),
+				multiplying = new Thread(new WaitAndNotifyExample(multiply)),
+				dividing = new Thread(new WaitAndNotifyExample(divide));
 
 		adding.start();
 		subtracting.start();
