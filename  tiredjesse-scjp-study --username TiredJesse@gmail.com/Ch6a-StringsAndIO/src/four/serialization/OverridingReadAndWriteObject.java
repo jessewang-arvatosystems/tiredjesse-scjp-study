@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class SerializeRelatedObjectsPt3 {
+public class OverridingReadAndWriteObject {
 	public static void main(String[] args) {
 		Classroom c = new Classroom(321, 20);
 		School s = new School(c);
