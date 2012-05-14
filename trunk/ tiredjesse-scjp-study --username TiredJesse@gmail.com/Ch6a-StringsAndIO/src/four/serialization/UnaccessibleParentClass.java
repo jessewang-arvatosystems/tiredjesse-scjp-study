@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 @SuppressWarnings("unused")
-public class SerializeRelatedObjectsPt4 {
+public class UnaccessibleParentClass {
 
 	public static void main(String... args) {
 		Child firstChild = new Child();
