@@ -1,48 +1,39 @@
 package four.serialization;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class BasicSerialization implements Serializable { // Important to implement this!
+public class BasicSerialization extends FileIO { 
+	// The FileIO class was made for convenience, due to a lot of repeating code
+	// Look at the class first before continuing
 	
-	private static final long serialVersionUID = 4040544480212537283L;
-	private int number = 5;
+	private static int inputNumber = 14;
 	
 	public static void main(String... serializationStuff) {
-		BasicSerialization before = new BasicSerialization();
-		BasicSerialization after = null;
+		SerializableClass before = new SerializableClass(inputNumber);
+		SerializableClass after;
 		
-		System.out.println("Number in Before is: " + before.number);
-		
-		before.number = 14;
-		
-		try {
-			FileOutputStream fs = new FileOutputStream("testSer.ser");
-			ObjectOutputStream os = new ObjectOutputStream(fs); // ObjectOutputStream accepts OutputStreams as its' constructor argument
-			os.writeObject(before);
-			os.flush();
-			os.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		}
+		System.out.println("Number in Before is: " + before.getNumber());
+		outputObjectToFile(before);
 		
 		
-		try {
-			FileInputStream fis = new FileInputStream("testSer.ser");
-			ObjectInputStream ois = new ObjectInputStream(fis); // ObjectInputStream accepts InputStreams as its' constructor argument
-			after = (BasicSerialization) ois.readObject(); // Must must use cast!
-			ois.close();
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
-		System.out.println("Number in After is: " + after.number); // Serialization is successful if value is equal to 14
+		after = inputObjectFromFile();
+		System.out.println("Number in After is: " + after.getNumber()); 
+		// Serialization is successful if value is equal to inputNumber
 	}
 
+}
+
+class SerializableClass implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
+	private int number;
+	
+	public SerializableClass(int number) {
+		this.number = number;
+	}
+	
+	public int getNumber() {
+		return number;
+	}
+	
 }

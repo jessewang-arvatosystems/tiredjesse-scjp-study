@@ -1,14 +1,11 @@
 package four.serialization;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class OverridingReadAndWriteObject {
+public class OverridingReadAndWriteObject extends FileIO {
 	public static void main(String[] args) {
 		Classroom c = new Classroom(321, 20);
 		School s = new School(c);
@@ -16,26 +13,9 @@ public class OverridingReadAndWriteObject {
 		
 		System.out.println("s School size is: " + s.getClassroom().getClassroomSize());
 		System.out.println("s Number students is: " + s.getClassroom().getNumberStudents());
-		
-		FileOutputStream fos;
-		try {
-			fos = new FileOutputStream("testSer.ser");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(s);
-			oos.flush();
-			oos.close();
-			
-			FileInputStream fis = new FileInputStream("testSer.ser");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			s2 = (School) ois.readObject();
-			ois.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+
+		outputObjectToFile(s);
+		s2 = inputObjectFromFile();
 		
 		System.out.println("s2 School size is: " + s2.getClassroom().getClassroomSize());
 		System.out.println("s2 Number students is: " + s2.getClassroom().getNumberStudents());

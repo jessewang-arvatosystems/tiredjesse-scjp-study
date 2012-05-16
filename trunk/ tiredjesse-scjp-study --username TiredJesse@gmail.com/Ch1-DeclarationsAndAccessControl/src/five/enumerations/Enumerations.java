@@ -1,4 +1,4 @@
-package three.syntax;
+package five.enumerations;
 
 // Enums can only implement Interfaces
 // Since an enum is NOT a class, cannot extend a class nor be extended upon!
@@ -22,7 +22,7 @@ enum OuterEnum implements Messenger {
 	}
 } 
 
-public class Enumerators {
+public class Enumerations {
 	enum InnerEnum implements Messenger{
 		TWO("constant two") {
 			@Override

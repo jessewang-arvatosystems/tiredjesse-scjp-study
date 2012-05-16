@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 @SuppressWarnings("unused")
-public class UnaccessibleParentClass {
+public class UnaccessibleParentClass extends FileIO {
 
 	public static void main(String... args) {
 		Child firstChild = new Child();
@@ -17,27 +17,11 @@ public class UnaccessibleParentClass {
 		
 		System.out.println("Before writing object output stream");
 		
-		FileOutputStream fos;
-		try {
-			fos = new FileOutputStream("testSer.ser");
-			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			oos.writeObject(firstChild);
-			oos.flush();
-			oos.close();
-			
-			System.out.println("Reading object input stream");
-			
-			FileInputStream fis = new FileInputStream("testSer.ser");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			secondChild = (Child) ois.readObject();
-			ois.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+		outputObjectToFile(firstChild);
+		
+		System.out.println("Reading object input stream");
+		
+		secondChild = inputObjectFromFile();
 	}
 	
 }

@@ -1,9 +1,9 @@
-package four.objectrelations;
+package four.instanceofoperator;
 
 // Use the instanceof operator to check if the instance if a subclass of a class
 // The instanceof operator can only be done to classes that are related to each other
 
-public class FamilyTree {
+public class InstanceOf {
 	
 	public static void main(String... related) {
 		Grandfather grandfather = new Grandfather();

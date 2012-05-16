@@ -1,4 +1,4 @@
-package three.syntax;
+package five.enumerations;
 
 // Valid
 public enum EnumModifiers{}
@@ -21,7 +21,6 @@ class SomeClass {
 	static enum InnerStatic {}
 	
 	// Enums can never be final or abstract
-	// makes no sense
 //	final enum InnerFinal {}
 //	abstract enum InnerAbstract {}
 }
