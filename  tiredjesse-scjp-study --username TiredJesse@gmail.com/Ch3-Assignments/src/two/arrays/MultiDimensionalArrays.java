@@ -3,7 +3,7 @@ package two.arrays;
 // Detail in how an array can fit into another array
 
 @SuppressWarnings("unused")
-public class ArraysPt2 {
+public class MultiDimensionalArrays {
 	
 	public static void main(String[] moreArrays) {
 		int[][][][] a1 = new int[2][3][4][5];
