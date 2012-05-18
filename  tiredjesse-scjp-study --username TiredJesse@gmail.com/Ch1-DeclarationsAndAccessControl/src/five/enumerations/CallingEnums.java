@@ -12,6 +12,7 @@ public class CallingEnums {
 	static Animal a;
 	Animal b;
 	
+	@SuppressWarnings("static-access")
 	public static void main(String... args) {
 		a = a.HORSE; // Valid, but not good syntax, should access statically
 		a = new CallingEnums().b.DOLPHIN; // Same comment as last line
