@@ -12,13 +12,13 @@ enum OuterEnum implements Messenger {
 	}
 	
 	@Override
-	public String getMsg() {
-		return msg;
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 	
 	@Override
-	public void setMsg(String msg) {
-		this.msg = msg;
+	public String toString() {
+		return msg;
 	}
 } 
 
@@ -26,7 +26,7 @@ public class Enumerations {
 	enum InnerEnum implements Messenger{
 		TWO("constant two") {
 			@Override
-			public String getMsg() {
+			public String toString() {
 				return "overridden msg";
 			}
 
@@ -45,7 +45,7 @@ public class Enumerations {
 		}
 		
 		@Override
-		public String getMsg() {
+		public String toString() {
 			return msg;
 		}
 	}; // Semicolon is optional
@@ -58,13 +58,13 @@ public class Enumerations {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(OuterEnum.ONE.getMsg()); // constant one
-		System.out.println(InnerEnum.TWO.getMsg()); // overridden msg
-		System.out.println(InnerEnum.THREE.getMsg()); // constant three
+		System.out.println(OuterEnum.ONE); // constant one
+		System.out.println(InnerEnum.TWO); // overridden msg
+		System.out.println(InnerEnum.THREE); // constant three
 	}
 }
 
 interface Messenger {
-	public abstract String getMsg();
+	public abstract String toString();
 	void setMsg(String msg); // Note still public and abstract just not mentioned
 }
