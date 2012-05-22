@@ -2,7 +2,7 @@ package one.introduction;
 
 public class Encapsulation {}
 
-// Encapsulation helps hides implementation behind an interface
+// Encapsulation helps hides implementation behind an interface or API
 
 // IE:
 @SuppressWarnings("unused")

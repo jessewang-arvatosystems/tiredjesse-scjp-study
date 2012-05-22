@@ -32,12 +32,13 @@ public class CollectionHierarchy {
 //		Collection c5 = new HashMap();
 		
 		// Sets
-		Set s1 = new HashSet(); // Fast access
+		Set s1 = new HashSet(); // Fastest access
 		Set s2 = new LinkedHashSet(); // Ordered by insertion order
 		Set s3 = new TreeSet(); // Sorts in natural ascending order, implements NavigableSet
+								// Will throw ClassCastException if the type inserted does not implement Comparable
 		
 		// Lists
-		List l1 = new ArrayList(); // Fast iteration
+		List l1 = new ArrayList(); // Fastest iteration
 		List l2 = new Vector(); // Synchronized version of ArrayList
 		List l3 = new LinkedList(); // Fast insertion and deletion, implements Queue and List
 		
@@ -52,6 +53,7 @@ public class CollectionHierarchy {
 		Map m2 = new Hashtable(); // Synchronized version of HashMap, cannot have a null key or null values
 		Map m3 = new LinkedHashMap(); // Ordered by insertion order and last accessed order, fast iteration
 		Map m4 = new TreeMap(); // Sorts in natural ascending order, implements NavigableMap
+								// Will throw ClassCastException if the type of the key inserted does not implement Comparable
 	}
 
 }

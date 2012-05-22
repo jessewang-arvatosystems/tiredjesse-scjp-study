@@ -19,6 +19,13 @@ interface SampleInterface extends Interfaces {
 	abstract void method3();
 	public abstract void method4();
 	
+	//Same for Enumerations
+	enum InnerEnum {}
+	static enum InnerEnum2{}
+//	final enum InnerEnum3{} // Enums can't be final, they can't be overriden so it makes no sense
+	public enum InnerEnum4{}
+	public static enum InnerEnum5{}
+	
 	//Classes do not follow this rule
 	class InnerClass {}
 	static class InnerClass2 {}
@@ -27,11 +34,6 @@ interface SampleInterface extends Interfaces {
 	public final static class InnerClass5{}
 	public abstract static class InnerClass6{}
 	
-	enum InnerEnum {}
-	static enum InnerEnum2{}
-//	final enum InnerEnum3{} // Enums can't be final, they can't be overriden so it makes no sense
-	public enum InnerEnum4{}
-	public static enum InnerEnum5{}
 	
 	//Note the modifiers of these variables and methods CANNOT be changed
 	/*	

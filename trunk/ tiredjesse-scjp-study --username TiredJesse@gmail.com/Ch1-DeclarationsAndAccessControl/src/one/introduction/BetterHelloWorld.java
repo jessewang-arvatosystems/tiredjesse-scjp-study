@@ -23,7 +23,7 @@ public class BetterHelloWorld {
 	}
 	
 	// "..." is a var-arg, valid syntax for JRE 1.5 and after
-	public static void main(String... args) { 
+	public static void main(String... betterWorld) { 
 		new BetterHelloWorld();
 	}
 	

@@ -31,6 +31,6 @@ class Zoo {
 	
 	void animalEat() {
 		animal.eat();
-//		animal.drink(); // Compilation error, the Animal class does not have this method
+//		animal.drink(); // Compilation error, the declared Animal class does not have this method
 	}
 }

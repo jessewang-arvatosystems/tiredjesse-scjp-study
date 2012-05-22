@@ -8,9 +8,11 @@ public class FileCreation {
 		File file = new File("fileTutorial.txt");
 		boolean fileCreationSuccess = false;
 		
-		if (!file.exists()) { // check if there is a file already made
+		if (!file.exists() || !file.isFile()) { // check if there is a file already made
+												// if there is a file, check that it is a file (and not a directory)
 			fileCreationSuccess = file.createNewFile(); // make fileTutorial.txt
 		}
+		
 		
 		if (fileCreationSuccess) {
 			System.out.println("New file has been created!");

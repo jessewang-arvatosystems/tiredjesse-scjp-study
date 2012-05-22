@@ -5,6 +5,7 @@ public class Animal {
 	String NAME = "Unknown";
 	byte AVG_AGE = -1;
 	
+	// inner interface
 	interface Default {
 		String NAME = "Animalia";
 		byte AVG_AGE = 30;

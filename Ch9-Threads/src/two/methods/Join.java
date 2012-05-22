@@ -12,9 +12,9 @@ package two.methods;
  * 
  * Thread Stacks
  * 1. [main's stack: main()]
- * 2. [main's stack: main(), A's stack: A.run()]
+ * 2. [main's stack: main()]  [A's stack: A.run()]
  * 3. [A's stack: A.run(), main()] // a.join() called
- * 4. [main's stack: main(), B's stack: B.run()]
+ * 4. [main's stack: main()]  [B's stack: B.run()]
  */
 
 

@@ -11,7 +11,7 @@ public class RestrictionsForWait {
 		try {
 			example.wait(); // Will throw an IllegalMonitorStateException()
 		} catch (InterruptedException e) {
-			System.out.println("Exception caught!"); // Does not the exception
+			System.out.println("Exception caught!"); // Does not trigger the exception
 		}
 		System.out.println("Done");			
 

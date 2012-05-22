@@ -18,7 +18,7 @@ class Supermarket {
 		public void action() {
 			System.out.println("Sells goods");
 		}
-	};
+	}; // Note semi-colon at the end
 	
 	Person manager = new Person() {
 		public void action() {

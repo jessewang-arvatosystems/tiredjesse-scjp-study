@@ -5,6 +5,7 @@ public abstract class Animal {
 	String NAME = "Unknown";
 	byte AVG_AGE = -1;
 	
+	// inner static class
 	static class Default {
 		String NAME = "Animalia";
 		byte AVG_AGE = 30;

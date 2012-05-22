@@ -2,7 +2,10 @@ package five.covariantreturns;
 
 // As of Java 5, returns can be covariant.
 // This means that a child of a class can be returned.
+
 // However, this case is not the same when Generics are involved.
+// IE:
+// ArrayList<Parent> getChild() { return new ArrayList<Child>(); }
 
 public class CovariantReturns {
 

@@ -32,8 +32,6 @@ public class ConsistentType {
 		treeSetOfNumbers.add(22.12);
 		treeSetOfNumbers.add(22.00);
 //		treeSetOfNumbers.add(1); // ClassCastException
-
-		
 	}
 
 }
