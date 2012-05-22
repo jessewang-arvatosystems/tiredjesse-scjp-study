@@ -15,7 +15,7 @@ public class BasicPrintf {
 		System.out.format("Boolean Test1 is: %b\n", b);
 		System.out.printf("Boolean Test2 is: %b\n", b);
 		
-		// Any non boolean value will also work!
+		// Any non boolean value will also work and will return true
 		System.out.printf("Boolean Test3 is: %b\n", c); 
 		System.out.printf("Boolean Test4 is: %b\n", i); 
 		System.out.printf("Boolean Test5 is: %b\n", f); 

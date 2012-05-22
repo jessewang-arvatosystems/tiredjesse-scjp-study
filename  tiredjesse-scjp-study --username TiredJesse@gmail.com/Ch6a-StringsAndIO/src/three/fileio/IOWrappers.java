@@ -7,7 +7,7 @@ import java.io.*;
 // The readers can wrap other readers and same goes for writers
 
 @SuppressWarnings("unused")
-public class IOClassCombinations {
+public class IOWrappers {
 	
 	public static void main(String[] args) throws IOException {
 		File file = new File("fileTutorial.txt");
